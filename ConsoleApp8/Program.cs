@@ -1,4 +1,5 @@
 ﻿
+
 namespace ConsoleApp8;
 
 public interface IUniversityMember
@@ -47,4 +48,19 @@ public class UniversityMember : IUniversityMember
         MemberId = id;
     }
     
+}
+
+public class Professor : UniversityMember
+{
+    public Professor(string name, string id) : base(name, id){}
+
+    public override void PerformDuties()
+    {
+        base.PerformDuties();
+        ActionLog.Add("Lecture delivered");
+    }
+    public void ConductResearch(string topic)
+    {
+        ActionLog.Add($"Professor {Name} does research  for {topic}");
+    }
 }
