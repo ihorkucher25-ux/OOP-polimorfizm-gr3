@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace ConsoleApp8;
 
-Console.WriteLine("Hello, World!");
+public interface IUniversityMember
+{
+    string Name { get; set; }
+    string MemberId { get; }
+    List<string> ActionLog { get; set; }
+    void PerformDuties();
+}
+
